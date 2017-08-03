@@ -49,7 +49,9 @@ this.ckan.module('daterangepicker-module', function ($, _) {
                 $('#daterange').val(startDateString + ' - ' + endDateString);
             }
 
-
+           // Force language  
+           moment.locale('es');
+            
             // Add a date-range picker widget to the <input> with id #daterange
            $('input[id="daterange"]').daterangepicker({
                // ranges: {
