@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 import sys, os
 
+from ckan import plugins
+from ckan.plugins import toolkit
+
 version = '0.0'
 
 setup(
