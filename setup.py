@@ -24,7 +24,6 @@ setup(
     ],
     entry_points='''
     	[ckan.plugins]
-        itranslation=ckanext.itranslation.plugin:ExampleITranslationPlugin
 	extend_search=ckanext.extend_search.plugin:ExtendSearchPlugin
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan  	
