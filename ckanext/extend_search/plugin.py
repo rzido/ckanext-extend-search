@@ -2,6 +2,7 @@ import ckan
 import pylons
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.plugins import DefaultTranslation
 from ckan.model import User, Package
 import ckan.model.meta as meta
 from ckan.lib.base import c
@@ -9,13 +10,15 @@ from sqlalchemy import distinct
 from helpers import extend_search_convert_local_to_utc_timestamp
 
 
-class ExtendSearchPlugin(plugins.SingletonPlugin):
+
+class ExtendSearchPlugin(plugins.SingletonPlugin, , DefaultTranslation):
     '''
     Extends the Ckan dataset/package search
     '''
     print "loading ckanext-extend_search"
 
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IPackageController, inherit=True)
 
     def update_config(self, config):
