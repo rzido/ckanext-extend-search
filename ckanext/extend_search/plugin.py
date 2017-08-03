@@ -11,7 +11,7 @@ from helpers import extend_search_convert_local_to_utc_timestamp
 
 
 
-class ExtendSearchPlugin(plugins.SingletonPlugin, , DefaultTranslation):
+class ExtendSearchPlugin(plugins.SingletonPlugin,  DefaultTranslation):
     '''
     Extends the Ckan dataset/package search
     '''
