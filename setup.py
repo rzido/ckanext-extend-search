@@ -34,6 +34,7 @@ setup(
             ('**.py', 'python', None),
             ('**.js', 'javascript', None),
             ('**/templates/**.html', 'ckan', None),
+	    ('**/fanstatic/**.js', 'javascript', None),
         ],
      
      } 
