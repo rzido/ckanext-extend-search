@@ -23,7 +23,16 @@ setup(
         # -*- Extra requirements: -*-
     ],
     entry_points='''
-	    [ckan.plugins]
-  	    extend_search=ckanext.extend_search.plugin:ExtendSearchPlugin
+    	[ckan.plugins]
+        itranslation=ckanext.itranslation.plugin:ExampleITranslationPlugin
+	extend_search=ckanext.extend_search.plugin:ExtendSearchPlugin
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan  	
 	''',
+     message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
 )
